@@ -22,5 +22,5 @@ void UGISS_ActorPoolManager::SpawnProjectileFromPool()
 
 void UGISS_ActorPoolManager::SendPooledActorReference()
 {
-	int a = 1;
+
 }
