@@ -322,3 +322,6 @@ RELEASE_MSG
 
 .vsconfig
 .idea/*
+
+#Just for CPP - no Content
+/Content
