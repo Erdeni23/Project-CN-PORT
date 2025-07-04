@@ -13,13 +13,20 @@ class UActorPoolInterface : public UInterface
 	GENERATED_BODY()
 };
 
-/**
- * 
- */
+
 class CPPANDBP_PORTFOLIO_API IActorPoolInterface
 {
 	GENERATED_BODY()
 
-	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")
+	void ReturnProjectileToPool(AActor* Projectile);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")
+	void PooledProjectileReference(AActor* PooledProjectile);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")
+	void SpawnProjectileFromPool(AActor* Requester, AActor* Weapon, FTransform Transform);
 };
+
