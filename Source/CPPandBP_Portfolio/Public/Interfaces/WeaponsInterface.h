@@ -6,7 +6,7 @@
 #include "UObject/Interface.h"
 #include "WeaponsInterface.generated.h"
 
-// This class does not need to be modified.
+
 UINTERFACE(MinimalAPI)
 
 class UWeaponsInterface : public UInterface
@@ -18,11 +18,10 @@ class CPPANDBP_PORTFOLIO_API IWeaponsInterface
 {
 	GENERATED_BODY()
 
-	
 public:
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Weapons")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Weapons") // from GunOwner to Gun
 	void Shoot(ACharacter* GunOwner, USkeletalMeshComponent* OwnerSkeletalMesh, UPrimitiveComponent* OwnerCapsule, FTransform OwnerTransform);
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Weapons")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Weapons") // from DamageSource to HitObject
 	void DealDamage(float Damage, FName HitBone, FVector ImpactNormal);
 };

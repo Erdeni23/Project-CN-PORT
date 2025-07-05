@@ -6,7 +6,7 @@
 #include "UObject/Interface.h"
 #include "ActorPoolInterface.generated.h"
 
-// This class does not need to be modified.
+
 UINTERFACE(MinimalAPI)
 class UActorPoolInterface : public UInterface
 {
@@ -20,13 +20,13 @@ class CPPANDBP_PORTFOLIO_API IActorPoolInterface
 
 public:
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")  // from Projectile to Game Instance SubSystem
 	void ReturnProjectileToPool(AActor* Projectile);
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")  // from Projectile to Owner of an initiator
 	void PooledProjectileReference(AActor* PooledProjectile);
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "ActorPool")  // from an Initiator to Game Instance SubSystem
 	void SpawnProjectileFromPool(AActor* Requester, AActor* Weapon, FTransform Transform);
 };
 
