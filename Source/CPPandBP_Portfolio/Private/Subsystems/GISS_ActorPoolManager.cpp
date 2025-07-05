@@ -18,7 +18,6 @@ void UGISS_ActorPoolManager::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
 	UE_LOG(LogTemp, Warning, TEXT("ObjectPoolSubsystem has been initialized"));
-	
 	Init();
 }
 
