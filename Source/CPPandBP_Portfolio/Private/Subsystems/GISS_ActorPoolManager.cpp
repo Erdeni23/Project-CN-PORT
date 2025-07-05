@@ -56,10 +56,9 @@ AActor* UGISS_ActorPoolManager::SpawnProjectileFromGameInstancePool
 			Projectile->isInUse(true, Requester, Weapon);
 			IActorPoolInterface::Execute_PooledProjectileReference(Weapon,Projectile);
 			
-			/*интерфейс для передачи оружию инофрмации о снаряде выпущенным Requester'ом
+			/*интерфейс для передачи оружию информации о снаряде выпущенным Requester'ом
 			нужно для правильной работы коллизии 
 			*/
-			
 			
 			return Projectile;
 		}
