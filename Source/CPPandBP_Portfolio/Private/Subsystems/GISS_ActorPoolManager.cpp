@@ -3,8 +3,6 @@
 
 #include "GISS_ActorPoolManager.h"
 
-
-
 bool UGISS_ActorPoolManager::ShouldCreateSubsystem(UObject* Outer) const 
 {
 	if (this->GetClass()->IsInBlueprint() && Super::ShouldCreateSubsystem(Outer))
@@ -30,7 +28,6 @@ void UGISS_ActorPoolManager::Initialize(FSubsystemCollectionBase& Collection)
 	}
 	return nullptr;
 }
-
 
 void UGISS_ActorPoolManager::Deinitialize()
 {

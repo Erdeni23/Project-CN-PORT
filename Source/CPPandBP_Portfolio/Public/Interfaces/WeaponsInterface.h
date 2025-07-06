@@ -24,4 +24,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Weapons") // from DamageSource to HitObject
 	void DealDamage(float Damage, FName HitBone, FVector ImpactNormal);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Weapons") // from Weapon to WeaponHolder
+	void AddWeapon(float Damage, FName HitBone, FVector ImpactNormal);
 };
